@@ -1,0 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro&display=swap");
+/* font-family: 'Kantumruy Pro', sans-serif; */
+
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro&family=Playfair+Display:wght@800&display=swap");
+/* font-family: 'Playfair Display', serif; */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+/* font-family: 'Roboto Mono', monospace; */
+
+.col-1 {
+  width: calc(100% * (1 / 12));
+}
+.col-2 {
+  width: calc(100% * (2 / 12));
+}
+.col-3 {
+  width: calc(100% * (3 / 12));
+}
+.col-4 {
+  width: calc(100% * (4 / 12));
+}
+.col-5 {
+  width: calc(100% * (5 / 12));
+}
+.col-6 {
+  width: calc(100% * (6 / 12));
+}
+.col-7 {
+  width: calc(100% * (7 / 12));
+}
+.col-8 {
+  width: calc(100% * (8 / 12));
+}
+.col-9 {
+  width: calc(100% * (9 / 12));
+}
+.col-10 {
+  width: calc(100% * (10 / 12));
+}
+.col-11 {
+  width: calc(100% * (11 / 12));
+}
+.col-12 {
+  width: calc(100% * (12 / 12));
+}
+
+body {
+  margin: 0;
+}
+
+.pos-container {
+  height: 100vh;
+  width: 85%;
+  float: right;
+  color: black;
+  display: flex;
+}
+
+/* POS COUNTER CSS */
+.poscounter-container {
+  width: 35%;
+  height: 100vh;
+  border-right: 1px solid #344c57;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* POS PRODUCTS CSS */
+.posproduct-container {
+  width: 65%;
+  height: 100vh;
+}
+
+.postoolbar-container {
+  width: 100%;
+  height: 15vh;
+}
+
+.posproduct-display-container {
+  width: 100%;
+  height: 85vh;
+}
+
+.pos-search-view {
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pos-change-view-button {
+  border: 3px solid #344c57;
+  border-radius: 8rem;
+  background: none;
+  color: #344c57;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  width: 7rem;
+  margin-left: 1rem;
+}
+.pos-change-view-button:hover {
+  cursor: pointer;
+  background: #344c57;
+  color: #dee5ee;
+}
+
+.addproduct-icon {
+  margin-right: 0.4rem;
+}
+
+.pos-search-filter {
+  outline: red;
+  font-size: 1.2rem;
+  padding: 0.4rem 0;
+  border: 2px solid #344c57;
+  border-radius: 1.5rem;
+  text-align: center;
+  width: 70%;
+  margin-right: 1rem;
+}
+
+.pos-filter-product {
+  width: 100%;
+  height: 7vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.pos-filter-product::-webkit-scrollbar {
+  width: 1px;
+  height: 3px;
+}
+.pos-filter-product::-webkit-scrollbar-track {
+  background: #dee5ee;
+  border-radius: 1px;
+}
+.pos-filter-product::-webkit-scrollbar-thumb {
+  background-color: #364f5b;
+  border-radius: 1px;
+  width: 1px;
+}
+
+.filter-button {
+  border: none;
+  padding: 0.3rem 1rem;
+  border-radius: 1.2rem;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin: 0 0.5rem;
+  color: gray;
+}
+
+.filter-button:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 5px rgba(33, 47, 54, 0.2);
+}
+
+/* POS LIST VIEW CSS */
+
+.list-view-section {
+  min-height: 85vh;
+  width: 100%;
+}
+
+.list-view-tableheader {
+  min-height: 5vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.list-view-tablebody {
+  height: 80vh;
+  overflow-y: auto;
+}
+.list-view-tablebody::-webkit-scrollbar {
+  width: 5px;
+}
+
+.list-view-tablebody::-webkit-scrollbar-track {
+  background: #dee5ee;
+  border-radius: 20px;
+}
+.list-view-tablebody::-webkit-scrollbar-thumb {
+  background-color: #344c57;
+  border-radius: 5px;
+}
+
+.tableheader-text {
+  font-size: 0.8rem;
+  color: gray;
+  text-align: center;
+}
+
+.product-container {
+  width: 100%;
+  border: none;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 0rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.product-container:hover {
+  background: #dee5ee;
+}
+
+.product-text {
+  font-size: 0.9rem;
+}
+
+.product-image {
+  height: 2rem;
+}
+
+/* GRID VIEW CSS */
+
+.grid-view-section {
+  max-height: 85vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+.product-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+.product-button-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.product-button-container::-webkit-scrollbar-track {
+  background: #dee5ee;
+  border-radius: 20px;
+}
+.product-button-container::-webkit-scrollbar-thumb {
+  background-color: #344c57;
+  border-radius: 5px;
+}
+
+.product-button {
+  height: calc(100vw / 10);
+  width: calc(100vw / 10);
+  margin: 0.6rem 0.6rem;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px rgba(155, 155, 155, 0.5);
+  background: white;
+  position: relative;
+}
+
+.product-button-image {
+  width: calc(100vw / 15);
+  height: calc(100vw / 15);
+}
+
+.product-button-priceqty {
+  position: absolute;
+  top: 0.4rem;
+}
+
+.product-button-name {
+  position: absolute;
+  width: 90%;
+  text-align: center;
+}
+
+.product-button:hover {
+  cursor: pointer;
+  background: rgb(249, 242, 242);
+}
+
+/* POS COUNTER CSS */
+
+.counter-header {
+  width: 90%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.reset-button {
+  border: none;
+  display: flex;
+  font-size: 0.7rem;
+  padding: 0.4rem 1rem;
+  border-radius: calc((0.4rem * 2) + 0.7rem);
+  background: #344c57;
+  color: white;
+}
+
+.reset-button:hover {
+  cursor: pointer;
+  background: #dee5ee;
+  color: black;
+}
+
+.counter-body {
+  width: 100%;
+  height: 60vh;
+  background: white;
+  overflow-y: auto;
+}
+
+.counter-body::-webkit-scrollbar {
+  width: 5px;
+}
+
+.counter-body::-webkit-scrollbar-track {
+  background: #dee5ee;
+  border-radius: 20px;
+}
+.counter-body::-webkit-scrollbar-thumb {
+  background-color: #344c57;
+  border-radius: 5px;
+}
+
+.counter-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0rem 0rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+.counter-item-image {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+}
+
+.counter-item-name {
+  width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-left: 0.2rem;
+}
+
+.counter-item-count {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.counter-button {
+  border: 1px solid #344c57;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  font-weight: 600;
+}
+
+.counter-button:hover {
+  cursor: pointer;
+  background: #344c57;
+  color: white;
+}
+
+.counter-icons {
+  font-size: 2rem;
+
+  background: none;
+}
+
+.counter-item-amount {
+  width: 22%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter-delete-container {
+  width: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter-delete-button {
+  width: 1.6rem;
+  height: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: #dee5ee;
+  border-radius: 1rem;
+}
+
+.counter-delete-button:hover {
+  cursor: pointer;
+}
+
+.counter-summary {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Roboto Mono", monospace;
+}
+
+.counter-border {
+  width: 90%;
+  border: 1px solid #344c57;
+}
+.summary-container {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+
+.payment-input {
+  align-self: flex-end;
+  width: 4rem;
+  font-family: "Roboto Mono", monospace;
+  text-align: end;
+  font-size: 0.9rem;
+}
+
+.counter-submit-button {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-button {
+  width: 90%;
+  height: 7vh;
+  border: none;
+  background: #344c57;
+  color: white;
+  text-shadow: 1px 1px 5px rgb(26, 23, 23);
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: #364f5b;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,478 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+/* font-family: 'Inter', sans-serif; */
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+@keyframes slide-in-from-top {
+  from {
+    transform: translateY(-80%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slide-in-from-left {
+  from {
+    transform: translateX(-30%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-in-from-right {
+  from {
+    transform: translateX(30%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+/* HOME PAGE CSS ---------------HOME PAGE CSS------------------HOME PAGE CSS */
+.home-container {
+  height: 90.5vh;
+  width: 100%;
+  display: flex;
+}
+
+.slogan-container {
+  height: 90.5vh;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slogan {
+  min-height: 20vh;
+  width: 90%;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: black;
+  letter-spacing: 2px;
+  animation: slide-in-from-top 500ms;
+}
+
+.sub-text {
+  min-height: 20vh;
+  width: 90%;
+  font-size: 1.5rem;
+  color: #334c57;
+  letter-spacing: 2px;
+  animation: slide-in-from-top 500ms;
+}
+
+.signup-button {
+  height: 20vh;
+  width: 90%;
+  color: #334c57;
+  display: block;
+  animation: slide-in-from-top 500ms;
+}
+
+.signin-button {
+  display: none;
+}
+
+.signup-link {
+  text-decoration: none;
+  color: white;
+  background: #334c57;
+  font-size: 1.5rem;
+  padding: 0.7rem 4rem;
+  border-radius: 1.2rem;
+}
+
+.landing-image-container {
+  height: 90.5vh;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.landing-image {
+  width: 100%;
+  animation: slide-in-from-top 1000ms;
+}
+
+.under-shadow {
+  width: 90%;
+  height: 25vh;
+  border-radius: 50%;
+  background: rgba(222, 229, 238, 0.6);
+  position: absolute;
+  z-index: -10;
+  bottom: 7vh;
+  animation: slide-in-from-top 250ms;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    height: 85vh;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15vh;
+  }
+
+  .landing-image-container {
+    width: 100%;
+    height: 40.5vh;
+    /* background: red; */
+  }
+
+  .landing-image {
+    animation: slide-in-from-top 1250ms;
+  }
+
+  .under-shadow {
+    width: 90%;
+    height: 12vh;
+    border-radius: 50%;
+    background: rgba(222, 229, 238, 0.6);
+    position: absolute;
+    z-index: -10;
+    left: calc(10% / 2);
+    top: 28vh;
+    animation: slide-in-from-top 1000ms;
+  }
+
+  .slogan-container {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .slogan {
+    min-height: 13vh;
+    width: 90%;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: black;
+    letter-spacing: 2px;
+    animation: slide-in-from-top 750ms;
+  }
+
+  .sub-text {
+    min-height: 15vh;
+    width: 90%;
+    font-size: 1rem;
+    color: #334c57;
+    text-align: center;
+    letter-spacing: 2px;
+    animation: slide-in-from-top 500ms;
+  }
+
+  .signup-button {
+    display: none;
+  }
+
+  .signin-button {
+    height: 10vh;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    color: #334c57;
+    animation: slide-in-from-top 250ms;
+  }
+
+  .signup-link {
+    text-align: center;
+  }
+}
+
+/* FEATURE PAGE CSS----------------FEATURE PAGE CSS-----------FEATURE PAGE CSS- */
+
+.feature-container {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.content-header {
+  height: 15vh;
+  text-align: center;
+  color: #334c57;
+  font-size: 4rem;
+  text-shadow: 2px 2px 5px rgba(90, 90, 91, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.content-container-right {
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.image-container-right {
+  width: 40%;
+  height: 60vh;
+  margin-left: 4rem;
+  z-index: 1;
+  animation: slide-in-from-left 1250ms;
+}
+
+.image-container-right > img {
+  height: 100%;
+  z-index: 2;
+}
+
+.description-container-right {
+  height: 80vh;
+  width: 75%;
+  background: #dee5ee;
+  position: absolute;
+  left: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  animation: slide-in-from-right 1000ms;
+}
+
+.description-wrapper-right {
+  width: 65%;
+  height: 60vh;
+  margin-right: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #334c57;
+}
+
+.description-header-right {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  animation: slide-in-from-right 1250ms;
+}
+
+.description-content-right {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  animation: slide-in-from-right 1500ms;
+}
+
+/* left */
+.content-container-left {
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.image-container-left {
+  width: 40%;
+  height: 60vh;
+  margin-right: 4rem;
+  position: absolute;
+  left: 55%;
+  z-index: 1;
+  animation: slide-in-from-right 1250ms;
+}
+
+.image-container-left > img {
+  height: 100%;
+  z-index: 2;
+}
+
+.description-container-left {
+  height: 80vh;
+  width: 75%;
+  background: #dee5ee;
+  position: absolute;
+  right: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  animation: slide-in-from-left 1000ms;
+}
+
+.description-wrapper-left {
+  width: 65%;
+  height: 60vh;
+  margin-left: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #334c57;
+}
+
+.description-header-left {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  animation: slide-in-from-left 1250ms;
+}
+
+.description-content-left {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  animation: slide-in-from-left 1500ms;
+}
+
+@media (max-width: 768px) {
+  .feature-container {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+
+  .content-header {
+    height: 15vh;
+    text-align: center;
+    color: #334c57;
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(90, 90, 91, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .content-container-right {
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+
+  .image-container-right {
+    width: 100%;
+    height: 40vh;
+    margin-left: 0rem;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    animation: slide-in-from-left 1250ms;
+  }
+
+  .image-container-right > img {
+    max-height: 40vh;
+    width: 90%;
+    height: auto;
+    z-index: 2;
+  }
+
+  .description-container-right {
+    height: 35vh;
+    width: 90%;
+    background: none;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slide-in-from-right 1000ms;
+  }
+
+  .description-wrapper-right {
+    width: 90%;
+    height: 30vh;
+    margin-right: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #334c57;
+  }
+
+  .description-header-right {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    animation: slide-in-from-right 1250ms;
+  }
+
+  .description-content-right {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-align: center;
+    animation: slide-in-from-right 1500ms;
+  }
+
+  /* left */
+  .content-container-left {
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    position: relative;
+  }
+
+  .image-container-left {
+    width: 100%;
+    height: 40vh;
+    margin-right: 0rem;
+    display: flex;
+    justify-content: center;
+    position: static;
+    z-index: 1;
+    animation: slide-in-from-left 1250ms;
+  }
+
+  .image-container-left > img {
+    max-height: 40vh;
+    width: 90%;
+    z-index: 2;
+  }
+
+  .description-container-left {
+    height: 35vh;
+    width: 90%;
+    background: none;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slide-in-from-right 1000ms;
+  }
+
+  .description-wrapper-left {
+    width: 90%;
+    height: 30vh;
+    margin-left: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #334c57;
+  }
+
+  .description-header-left {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    text-align: center;
+    animation: slide-in-from-right 1250ms;
+  }
+
+  .description-content-left {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-align: center;
+    animation: slide-in-from-right 1500ms;
+  }
+}
