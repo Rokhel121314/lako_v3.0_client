@@ -1,6 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createHashRouter,
+  RouterProvider,
+} from "react-router-dom";
 import Root from "./routes/featureroutes/Root";
 import ErrorPage from "./routes/featureroutes/ErrorPage";
 import Home from "./pages/landingpage/Home";
@@ -17,7 +21,7 @@ import Layout from "./routes/landingroutes/Layout";
 import ContactUs from "./pages/landingpage/ContactUs";
 import AboutUs from "./pages/landingpage/AboutUs";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/lako",
     element: <Root />,
