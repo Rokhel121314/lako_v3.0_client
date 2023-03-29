@@ -64,6 +64,7 @@ body {
 
 .nav-logo {
   height: 8vh;
+  cursor: pointer;
 }
 
 .nav-item {

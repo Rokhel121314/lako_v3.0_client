@@ -4,7 +4,7 @@ import "./home.css";
 function Feature() {
   return (
     <div id="features" className="feature-container">
-      <div className="content-header">FEATURES</div>
+      <div className="content-header">Features</div>
 
       <div className="content-container-right">
         <div className="image-container-right">

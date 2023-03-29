@@ -39,13 +39,19 @@ function Layout() {
       {/* navbar for window mode */}
       <nav className={styles["nav-container"]}>
         <div>
-          <NavLink className={styles["nav-brand"]} to={"/"}>
+          <Link
+            className={styles["nav-brand"]}
+            activeClass="active"
+            to="home"
+            smooth={true}
+            offset={-70}
+            duration={500}>
             <img
               className={styles["nav-logo"]}
               src={require("../../assests/logo/lako icon.png")}
               alt=""
             />
-          </NavLink>
+          </Link>
         </div>
 
         <div className={styles["nav-item"]}>
@@ -67,18 +73,24 @@ function Layout() {
             duration={500}>
             Features
           </Link>
-          <NavLink
+          <Link
             className={styles["nav-link"]}
-            // to={"/about"}
-          >
-            About Us
-          </NavLink>
-          <NavLink
+            activeClass="active"
+            to="about"
+            smooth={true}
+            offset={-0}
+            duration={500}>
+            About
+          </Link>
+          <Link
             className={styles["nav-link"]}
-            // to={"/contact"}
-          >
-            Contact Us
-          </NavLink>
+            activeClass="active"
+            to="contact"
+            smooth={true}
+            offset={-0}
+            duration={500}>
+            Contact
+          </Link>
 
           {!persistUserData ? (
             <NavLink
@@ -132,13 +144,18 @@ function Layout() {
             : `${styles["sm-navbar-container-hidden"]}`
         }>
         <div className={`${styles["smnav-brand"]}`}>
-          <NavLink to={"/"}>
+          <Link
+            activeClass="active"
+            to="home"
+            offset={-100}
+            smooth={true}
+            duration={500}>
             <img
               className={styles["smnav-logo"]}
               src={require("../../assests/logo/lako icon.png")}
               alt=""
             />
-          </NavLink>
+          </Link>
           <button className={styles["smnav-xbutton"]} onClick={toggle}>
             {!value ? (
               <GrClose className="close-icon" />
@@ -173,18 +190,26 @@ function Layout() {
             onClick={toggle}>
             Features
           </Link>
-          <NavLink
+          <Link
             className={styles["smnav-link"]}
-            // to={"/about"}
+            activeClass="active"
+            to="about"
+            offset={-15}
+            smooth={true}
+            duration={500}
             onClick={toggle}>
             About Us
-          </NavLink>
-          <NavLink
+          </Link>
+          <Link
             className={styles["smnav-link"]}
-            // to={"/contact"}
+            activeClass="active"
+            to="contact"
+            offset={-15}
+            smooth={true}
+            duration={500}
             onClick={toggle}>
             Contact Us
-          </NavLink>
+          </Link>
         </div>
         <div
           className={

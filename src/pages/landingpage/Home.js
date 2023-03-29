@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./home.css";
 import useLogin from "../../hooks/useLogin";
-import Feature from "./Feature";
 
 function Home() {
   const { persistUserData } = useLogin();
@@ -49,7 +48,6 @@ function Home() {
           <div className="under-shadow"></div>
         </div>
       </div>
-      <Feature />
     </>
   );
 }

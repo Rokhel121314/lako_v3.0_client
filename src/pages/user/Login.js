@@ -31,10 +31,10 @@ function Login() {
             We make your business easy!{" "}
           </div>
           <div className={styles["login-subtext"]}>
-            A virtual center for designers, devs, PMs, and all design parties to
+            Effortlessly manage inventory, POS and sales with LAKO. Optimize
           </div>
           <div className={styles["login-subtext"]}>
-            perform their duties in unison. At least 200% faster with Mockplus.
+            stock levels, increase profits.
           </div>
         </div>
       </div>

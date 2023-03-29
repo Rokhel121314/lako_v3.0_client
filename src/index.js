@@ -1,10 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {
-  createBrowserRouter,
-  createHashRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/featureroutes/Root";
 import ErrorPage from "./routes/featureroutes/ErrorPage";
 import Home from "./pages/landingpage/Home";
@@ -20,6 +16,7 @@ import { Provider } from "react-redux";
 import Layout from "./routes/landingroutes/Layout";
 import ContactUs from "./pages/landingpage/ContactUs";
 import AboutUs from "./pages/landingpage/AboutUs";
+import LandingPage from "./pages/landingpage/LandingPage";
 
 const router = createHashRouter([
   {
@@ -50,6 +47,10 @@ const router = createHashRouter([
     element: <Layout />,
     errorElement: <ErrorPage />,
     children: [
+      {
+        path: "/",
+        element: <LandingPage />,
+      },
       {
         path: "/",
         element: <Home />,
