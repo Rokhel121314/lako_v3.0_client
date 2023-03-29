@@ -638,6 +638,7 @@ body {
   width: 75%;
   height: 70vh;
   background: #dee5ee;
+  animation: slide-in-from-left 1250ms;
 }
 
 .details-wrapper {
@@ -710,6 +711,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: slide-in-from-right 1250ms;
 }
 
 .form-header {
