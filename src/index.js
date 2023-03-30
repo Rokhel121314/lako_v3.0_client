@@ -3,19 +3,15 @@ import ReactDOM from "react-dom/client";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/featureroutes/Root";
 import ErrorPage from "./routes/featureroutes/ErrorPage";
-import Home from "./pages/landingpage/Home";
 import Stock from "./pages/stocks/Stock";
 import Pos from "./pages/pos/Pos";
 import Transaction from "./pages/transactions/Transaction";
 import Sales from "./pages/sales/Sales";
 import Register from "./pages/user/Register";
 import Login from "./pages/user/Login";
-import Feature from "./pages/landingpage/Feature";
 import store from "./store";
 import { Provider } from "react-redux";
 import Layout from "./routes/landingroutes/Layout";
-import ContactUs from "./pages/landingpage/ContactUs";
-import AboutUs from "./pages/landingpage/AboutUs";
 import LandingPage from "./pages/landingpage/LandingPage";
 
 const router = createHashRouter([
@@ -50,22 +46,6 @@ const router = createHashRouter([
       {
         path: "/",
         element: <LandingPage />,
-      },
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/features",
-        element: <Feature />,
-      },
-      {
-        path: "/about",
-        element: <AboutUs />,
-      },
-      {
-        path: "/contact",
-        element: <ContactUs />,
       },
     ],
   },

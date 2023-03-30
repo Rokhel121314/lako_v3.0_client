@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.error-container {
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+}
+
+.error-image {
+  width: 40%;
+  height: 100dvh;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.error-image > img {
+  height: 95dvh;
+}
+
+.error-message {
+  width: 60%;
+  height: 100dvh;
+  color: #334c57;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.access-denied {
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.access-text {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.error-403 {
+  font-size: 7rem;
+  font-weight: 1000;
+  letter-spacing: 5px;
+  margin-top: 2rem;
+}
+
+.home-redirect {
+  text-decoration: none;
+  color: white;
+  background: #334c57;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+}
