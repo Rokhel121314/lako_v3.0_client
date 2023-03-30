@@ -38,8 +38,8 @@ body {
 .registerpopup-status {
   height: 50%;
   width: 100%;
-  background: #39c643;
-  border: 1px solid #39c643;
+  background: #334c57;
+  border: 1px solid #334c57;
   border-radius: 19px 19px 0 0;
   display: flex;
   flex-direction: column;
@@ -80,7 +80,7 @@ body {
 
 .continue-button {
   padding: 0.6rem 2rem;
-  background: #39c643;
+  background: #344c57;
   border: none;
   border-radius: 1.2rem;
   color: white;
@@ -97,8 +97,8 @@ body {
 .registerpopup-status-fail {
   height: 50%;
   width: 100%;
-  background: #b73939;
-  border: 1px solid #b73939;
+  background: #334c57;
+  border: 1px solid #334c57;
   border-radius: 19px 19px 0 0;
   display: flex;
   flex-direction: column;
@@ -114,7 +114,7 @@ body {
 
 .continue-button-fail {
   padding: 0.6rem 2rem;
-  background: #b73939;
+  background: #334c57;
   border: none;
   border-radius: 1.2rem;
   color: white;

@@ -123,10 +123,12 @@ function Layout() {
                     />
                     {persistUserData.store_name}
                   </NavLink>
-                  <div className={styles["menu-items"]}>
+                  <NavLink
+                    className={`${styles["menu-items"]} ${styles["menu-header"]}`}
+                    to={"/setting"}>
                     <RiUserSettingsFill className={styles["menu-icon"]} />
                     Account Setting
-                  </div>
+                  </NavLink>
                   <div
                     className={`${styles["menu-items"]} ${styles["menu-spacer"]}`}></div>
                   <div className={styles["menu-items"]} onClick={handleLogout}>

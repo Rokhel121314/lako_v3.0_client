@@ -15,7 +15,7 @@ function Login() {
 
   useEffect(() => {
     if (persistUserData) {
-      navigate("/lako/stocks");
+      navigate("/");
     } else if (!persistUserData) {
       return;
     }
@@ -44,6 +44,15 @@ function Login() {
       {/* LOG IN INTERFACE/FORM */}
       <div className={styles["login-form"]}>
         <div className={styles["form-container"]}>
+          <div className={styles["test-account-container"]}>
+            TEST ACCOUNT:
+            <br />
+            Puring Store
+            <br /> user & pass = jerick
+            <br />
+            Bitter-Sweet-Cafe
+            <br /> user & pass = rokhel
+          </div>
           <div className={styles["form-header"]}>Sign in to LAKO</div>
 
           {/* FORM */}

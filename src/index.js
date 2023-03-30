@@ -13,6 +13,7 @@ import store from "./store";
 import { Provider } from "react-redux";
 import Layout from "./routes/landingroutes/Layout";
 import LandingPage from "./pages/landingpage/LandingPage";
+import AccountSetting from "./pages/user/AccountSetting";
 
 const router = createHashRouter([
   {
@@ -46,6 +47,10 @@ const router = createHashRouter([
       {
         path: "/",
         element: <LandingPage />,
+      },
+      {
+        path: "/setting",
+        element: <AccountSetting />,
       },
     ],
   },
