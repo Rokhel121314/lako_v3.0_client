@@ -18,7 +18,7 @@ function Home() {
             Optimize stock levels, increase profits.
           </div>
           {persistUserData ? (
-            <NavLink className="" to={"/lako/sales"}>
+            <NavLink className="" to={"/lako/stocks"}>
               GO TO LAKO ACCOUNT
             </NavLink>
           ) : (
