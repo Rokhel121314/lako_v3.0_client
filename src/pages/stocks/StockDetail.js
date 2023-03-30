@@ -53,7 +53,7 @@ function StockDetail() {
         <div className={styles["stockdetail-image-container"]}>
           <img
             className={styles["stockdetail-image"]}
-            src={productDetail.product_image.url}
+            src={productDetail.product_image.secure_url}
             alt="img"
           />
           <div className={styles["stock-details"]}>

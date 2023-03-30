@@ -27,7 +27,7 @@ function StockGridView({ toggleTrueOnly, filteredProductData }) {
                   </div>
                   <img
                     className={styles["product-button-image"]}
-                    src={product.product_image.url}
+                    src={product.product_image.secure_url}
                     alt="img"
                   />
                   <div className={styles["product-button-name"]}>

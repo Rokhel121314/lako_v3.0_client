@@ -59,7 +59,7 @@ function StockListView({ toggleTrueOnly, filteredProductData }) {
                       className={`${styles["product-text"]} ${styles["col-2"]}`}>
                       <img
                         className={styles["product-image"]}
-                        src={product.product_image.url}
+                        src={product.product_image.secure_url}
                         alt="img"
                       />
                     </div>

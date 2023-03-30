@@ -73,7 +73,7 @@ function PosCounter() {
               <div className={styles["counter-items"]} key={product._id}>
                 <img
                   className={styles["counter-item-image"]}
-                  src={product.product_image.url}
+                  src={product.product_image.secure_url}
                   alt="img"
                 />
                 <div className={styles["counter-item-name"]}>
