@@ -211,23 +211,63 @@ function Layout() {
             Contact Us
           </Link>
         </div>
-        <div
-          className={
-            !value
-              ? `${styles["smnav-footer"]}`
-              : `${styles["smnav-footer-hidden"]}`
-          }>
-          <div className={styles["sm-signup-text"]}>Dont have an account?</div>
-          <div className={styles["smnav-signup-link"]}>
-            Sign up here{" "}
-            <NavLink
-              className={styles["register-link"]}
-              to={"/register"}
-              onClick={toggle}>
-              REGISTER
+
+        {persistUserData ? (
+          <div
+            className={
+              !value
+                ? `${styles["smnav-footer"]}`
+                : `${styles["smnav-footer-hidden"]}`
+            }>
+            <NavLink className={styles["store-link"]} to={"/lako/pos"}>
+              <div>
+                <img
+                  className={styles["store-icon"]}
+                  src={persistUserData.store_logo}
+                  alt=""
+                />
+              </div>
+              <div className={styles["store-name"]}>
+                {persistUserData.store_name}
+              </div>
             </NavLink>
+            <NavLink className={styles["store-link"]} to={"/lako/pos"}>
+              <div>
+                <RiUserSettingsFill className={styles["store-icon"]} />
+              </div>
+              <div className={styles["store-name"]}>Account Setting</div>
+            </NavLink>
+            <div
+              className={`${styles["store-link"]} ${styles["store-logout"]}`}
+              to={"/lako/pos"}
+              onClick={handleLogout}>
+              <div>
+                <RiLogoutBoxRFill className={styles["store-icon"]} />
+              </div>
+              <div className={styles["store-name"]}>Sign Out</div>
+            </div>
           </div>
-        </div>
+        ) : (
+          <div
+            className={
+              !value
+                ? `${styles["smnav-footer"]}`
+                : `${styles["smnav-footer-hidden"]}`
+            }>
+            <div className={styles["sm-signup-text"]}>
+              Dont have an account?
+            </div>
+            <div className={styles["smnav-signup-link"]}>
+              Sign up here{" "}
+              <NavLink
+                className={styles["register-link"]}
+                to={"/register"}
+                onClick={toggle}>
+                REGISTER
+              </NavLink>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* PUBLIC ROUTES */}
