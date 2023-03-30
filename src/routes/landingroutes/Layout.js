@@ -7,7 +7,11 @@ import useToUpperCase from "../../hooks/useToUpperCase";
 import styles from "./navbar.module.css";
 import { GrClose, GrMenu } from "react-icons/gr";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { RiUserSettingsFill, RiLogoutBoxRFill } from "react-icons/ri";
+import {
+  RiUserSettingsFill,
+  RiLogoutBoxRFill,
+  RiStoreFill,
+} from "react-icons/ri";
 import { Link } from "react-scroll";
 
 function Layout() {
@@ -221,11 +225,7 @@ function Layout() {
             }>
             <NavLink className={styles["store-link"]} to={"/lako/pos"}>
               <div>
-                <img
-                  className={styles["store-icon"]}
-                  src={persistUserData.store_logo}
-                  alt=""
-                />
+                <RiStoreFill className={styles["store-icon"]} />
               </div>
               <div className={styles["store-name"]}>
                 {persistUserData.store_name}

@@ -16,7 +16,9 @@ function Login() {
   useEffect(() => {
     if (persistUserData) {
       navigate("/lako/sales");
-    } else return;
+    } else if (!persistUserData) {
+      return;
+    }
   }, [persistUserData, navigate]);
 
   return (
