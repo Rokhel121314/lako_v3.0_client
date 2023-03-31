@@ -176,3 +176,9 @@ body {
   box-shadow: 5px 2px 8px rgba(52, 76, 87, 0.8);
   border-radius: 5px;
 }
+
+.stocklist-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

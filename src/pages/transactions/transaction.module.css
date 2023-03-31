@@ -347,3 +347,9 @@ body {
 .data-container:hover {
   background: #dee5ee;
 }
+
+.stocklist-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

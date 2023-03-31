@@ -52,7 +52,7 @@ export const transactionSlice = createSlice({
     salesData: [],
     salesDataByDate: [],
     perProductSalesDataByDate: [],
-    isLoading: true,
+    isLoadingTransaction: true,
   },
   reducers: {
     getFilteredTransactionList: (state, { payload }) => {
@@ -301,17 +301,17 @@ export const transactionSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(createTransaction.pending, (state, { payload }) => {
-        state.isLoading = true;
+        state.isLoadingTransaction = true;
       })
       .addCase(createTransaction.fulfilled, (state, { payload }) => {
         state.addedTransaction = payload;
-        state.isLoading = false;
+        state.isLoadingTransaction = false;
       })
       .addCase(createTransaction.rejected, (state, { payload }) => {
-        state.isLoading = false;
+        state.isLoadingTransaction = false;
       })
       .addCase(readAllTransactions.pending, (state, { payload }) => {
-        state.isLoading = true;
+        state.isLoadingTransaction = true;
       })
       .addCase(readAllTransactions.fulfilled, (state, { payload }) => {
         state.transactionList = payload.sort((a, b) =>
@@ -319,10 +319,10 @@ export const transactionSlice = createSlice({
         );
         state.transactionDetail = payload[0];
         state.filteredTransactionList = state.transactionList;
-        state.isLoading = false;
+        state.isLoadingTransaction = false;
       })
       .addCase(readAllTransactions.rejected, (state, { payload }) => {
-        state.isLoading = false;
+        state.isLoadingTransaction = false;
       });
   },
 });

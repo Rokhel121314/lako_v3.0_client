@@ -15,7 +15,7 @@ function StockAddProduct() {
   const dispatchData = { formData: formData, user_id: persistUserData.user_id };
 
   const dispatch = useDispatch();
-  const { isLoading } = useSelector((state) => state.product);
+  const { isSavingProduct } = useSelector((state) => state.product);
 
   return (
     <div className={styles["addstock-container"]}>
@@ -133,8 +133,8 @@ function StockAddProduct() {
           <button
             className={styles["addstock-button"]}
             type="submit"
-            disabled={isLoading ? true : false}>
-            {isLoading ? "...SAVING PRODUCT" : "SAVE PRODUCT"}
+            disabled={isSavingProduct ? true : false}>
+            {isSavingProduct ? "...SAVING PRODUCT" : "SAVE PRODUCT"}
           </button>
         </div>
       </form>

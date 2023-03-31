@@ -10,7 +10,7 @@ import PosListView from "./PosListView";
 function PosProducts() {
   const { value, toggle } = useToggle();
 
-  const { allProductData, filteredProductData } = useSelector(
+  const { allProductData, filteredProductData, isLoadingProduct } = useSelector(
     (state) => state.product
   );
 
@@ -19,58 +19,69 @@ function PosProducts() {
   const productType = allProductData.map((type) => type.product_type);
   const filterValue = ["all", ...new Set(productType)];
   return (
-    <div className={styles["posproduct-container"]}>
-      {/* POS TOOLBAR */}
-      <div className={styles["postoolbar-container"]}>
-        <div className={styles["pos-search-view"]}>
-          {/* GRID/LIST VIEW TOGGLE BUTTON */}
-          <button className={styles["pos-change-view-button"]} onClick={toggle}>
-            {value ? (
-              <>
-                <FiGrid className={styles["addproduct-icon"]} /> GRID
-              </>
-            ) : (
-              <>
-                <FiList className={styles["addproduct-icon"]} /> LIST
-              </>
-            )}
-          </button>
-          {/* POS SEARCH FILTER */}
-          <input
-            className={styles["pos-search-filter"]}
-            type="search"
-            placeholder="search product here..."
-            onChange={(e) => {
-              dispatch(searchFilter(e.target.value));
-            }}
-          />
+    <>
+      {isLoadingProduct ? (
+        <div className={`${styles["stocklist-loader"]}`}>
+          {" "}
+          <img src={require("../../assests/logo/loader.gif")} alt="" />
         </div>
-        <div className={styles["pos-filter-product"]}>
-          {/* FILTER BUTTONS */}
-
-          {filterValue.map((value, index) => {
-            return (
+      ) : (
+        <div className={styles["posproduct-container"]}>
+          {/* POS TOOLBAR */}
+          <div className={styles["postoolbar-container"]}>
+            <div className={styles["pos-search-view"]}>
+              {/* GRID/LIST VIEW TOGGLE BUTTON */}
               <button
-                className={styles["filter-button"]}
-                key={index}
-                onClick={(e) => {
-                  e.preventDefault();
-                  dispatch(filterProductData(value));
-                }}>
-                {value}
+                className={styles["pos-change-view-button"]}
+                onClick={toggle}>
+                {value ? (
+                  <>
+                    <FiGrid className={styles["addproduct-icon"]} /> GRID
+                  </>
+                ) : (
+                  <>
+                    <FiList className={styles["addproduct-icon"]} /> LIST
+                  </>
+                )}
               </button>
-            );
-          })}
+              {/* POS SEARCH FILTER */}
+              <input
+                className={styles["pos-search-filter"]}
+                type="search"
+                placeholder="search product here..."
+                onChange={(e) => {
+                  dispatch(searchFilter(e.target.value));
+                }}
+              />
+            </div>
+            <div className={styles["pos-filter-product"]}>
+              {/* FILTER BUTTONS */}
+
+              {filterValue.map((value, index) => {
+                return (
+                  <button
+                    className={styles["filter-button"]}
+                    key={index}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      dispatch(filterProductData(value));
+                    }}>
+                    {value}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+          <div className={styles["posproduct-display-container"]}>
+            {value ? (
+              <PosGridView filteredProductData={filteredProductData} />
+            ) : (
+              <PosListView filteredProductData={filteredProductData} />
+            )}
+          </div>
         </div>
-      </div>
-      <div className={styles["posproduct-display-container"]}>
-        {value ? (
-          <PosGridView filteredProductData={filteredProductData} />
-        ) : (
-          <PosListView filteredProductData={filteredProductData} />
-        )}
-      </div>
-    </div>
+      )}
+    </>
   );
 }
 

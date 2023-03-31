@@ -750,3 +750,9 @@ input::-webkit-inner-spin-button {
   background: #364f5b;
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.15);
 }
+
+.stocklist-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -101,7 +101,8 @@ export const productSlice = createSlice({
     productDetail: [],
     filteredProductData: [],
     productIndex: [],
-    isLoading: false,
+    isLoadingProduct: false,
+    isSavingProduct: false,
   },
   reducers: {
     getProductDetail: (state, { payload }) => {
@@ -148,62 +149,62 @@ export const productSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(addProduct.pending, (state, { payload }) => {
-        state.isLoading = true;
+        state.isSavingProduct = true;
       })
       .addCase(addProduct.fulfilled, (state, { payload }) => {
         state.productData = payload;
-        state.isLoading = false;
+        state.isSavingProduct = false;
       })
       .addCase(addProduct.rejected, (state, { payload }) => {
         state.productData = payload;
-        state.isLoading = false;
+        state.isSavingProduct = false;
       })
 
       .addCase(readAllProduct.pending, (state, { payload }) => {
-        state.isLoading = true;
+        state.isLoadingProduct = true;
       })
       .addCase(readAllProduct.fulfilled, (state, { payload }) => {
         state.allProductData = payload;
         state.filteredProductData = payload;
         state.productDetail = payload[0];
-        state.isLoading = false;
+        state.isLoadingProduct = false;
       })
       .addCase(readAllProduct.rejected, (state, { payload }) => {
-        state.isLoading = false;
+        state.isLoadingProduct = false;
       })
 
       .addCase(deleteProduct.pending, (state, { payload }) => {
-        state.isLoading = true;
+        state.isSavingProduct = true;
       })
       .addCase(deleteProduct.fulfilled, (state, { payload }) => {
         state.productData = payload;
-        state.isLoading = false;
+        state.isSavingProduct = false;
       })
       .addCase(deleteProduct.rejected, (state, { payload }) => {
-        state.isLoading = false;
+        state.isSavingProduct = false;
       })
 
       .addCase(updateProduct.pending, (state, { payload }) => {
-        state.isLoading = true;
+        state.isSavingProduct = true;
       })
       .addCase(updateProduct.fulfilled, (state, { payload }) => {
         state.productDetail = payload;
         state.productData = payload;
-        state.isLoading = false;
+        state.isSavingProduct = false;
       })
       .addCase(updateProduct.rejected, (state, { payload }) => {
-        state.isLoading = false;
+        state.isSavingProduct = false;
       })
       .addCase(updateProductQty.pending, (state, { payload }) => {
-        state.isLoading = true;
+        state.isSavingProduct = true;
       })
       .addCase(updateProductQty.fulfilled, (state, { payload }) => {
-        state.isLoading = false;
+        state.isSavingProduct = false;
         state.productData = [""];
       })
 
       .addCase(updateProductQty.rejected, (state, { payload }) => {
-        state.isLoading = false;
+        state.isSavingProduct = false;
       });
   },
 });
