@@ -30,6 +30,7 @@ function useLogin() {
     e.preventDefault();
     dispatch(userLogout());
     dispatch(resetCounter());
+    localStorage.removeItem("userData");
     setTimeout(() => {
       navigate("/login");
     }, 100);
