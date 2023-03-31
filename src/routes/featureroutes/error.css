@@ -59,3 +59,65 @@ body {
   margin-top: 2rem;
   border-radius: 1rem;
 }
+
+@media (max-width: 768px) {
+  .error-container {
+    height: 50dvh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .error-image {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .error-image > img {
+    height: 50dvh;
+  }
+
+  .error-message {
+    width: 100%;
+    height: 100dvh;
+    color: #334c57;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .access-denied {
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+
+  .access-text {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .error-403 {
+    font-size: 7rem;
+    font-weight: 1000;
+    letter-spacing: 5px;
+    margin-top: 1rem;
+  }
+
+  .home-redirect {
+    text-decoration: none;
+    color: white;
+    background: #334c57;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    margin-top: 0rem;
+    border-radius: 1rem;
+  }
+}
