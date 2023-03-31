@@ -10,7 +10,7 @@ function Login() {
   const { handleChange, loginData, persistUserData, resetPasswordInput } =
     useLogin();
   const dispatch = useDispatch();
-  const { userData } = useSelector((state) => state.user);
+  const { userData, isLoading } = useSelector((state) => state.user);
   const isBolean = typeof userData == "boolean";
 
   useEffect(() => {
@@ -20,6 +20,11 @@ function Login() {
       return;
     }
   }, [persistUserData, navigate]);
+
+  const handleLogin = () => {
+    dispatch(userLogin(loginData));
+    resetPasswordInput();
+  };
 
   return (
     <div className={styles["login-container"]}>
@@ -60,8 +65,7 @@ function Login() {
             className={styles["form-subcontainer"]}
             onSubmit={(e) => {
               e.preventDefault();
-              dispatch(userLogin(loginData));
-              resetPasswordInput();
+              handleLogin();
             }}>
             {/* USERNAME INPUT */}
             <div className={styles["form-inputcontainer"]}>
@@ -116,6 +120,13 @@ function Login() {
           </div>
         </div>
       </div>
+      {!isLoading ? (
+        ""
+      ) : (
+        <div className={styles["loader"]}>
+          <img src={require("../../assests/logo/loader.gif")} alt="" />
+        </div>
+      )}
     </div>
   );
 }
