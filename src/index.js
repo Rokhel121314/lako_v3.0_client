@@ -48,10 +48,6 @@ const router = createHashRouter([
         path: "/",
         element: <LandingPage />,
       },
-      {
-        path: "/setting",
-        element: <AccountSetting />,
-      },
     ],
   },
   {
@@ -61,6 +57,10 @@ const router = createHashRouter([
   {
     path: "/register",
     element: <Register />,
+  },
+  {
+    path: "/setting",
+    element: <AccountSetting />,
   },
 ]);
 

@@ -233,7 +233,7 @@ function Layout() {
                 {persistUserData.store_name}
               </div>
             </NavLink>
-            <NavLink className={styles["store-link"]} to={"/lako/pos"}>
+            <NavLink className={styles["store-link"]} to={"/setting"}>
               <div>
                 <RiUserSettingsFill className={styles["store-icon"]} />
               </div>
