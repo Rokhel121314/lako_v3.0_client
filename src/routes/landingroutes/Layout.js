@@ -248,6 +248,7 @@ function Layout() {
               </div>
               <div className={styles["store-name"]}>Sign Out</div>
             </div>
+            <div className={[styles["store-link"]]}></div>
           </div>
         ) : (
           <div
