@@ -160,3 +160,73 @@ body {
   cursor: pointer;
   transform: rotate(180deg);
 }
+
+@media (max-width: 768px) {
+  .brand-container {
+    height: 50vh;
+  }
+
+  .brand-name {
+    font-size: 0.8rem;
+  }
+
+  .nav-list {
+    height: 40vh;
+  }
+
+  .nav-item {
+    font-size: 0.6rem;
+  }
+
+  .nav-item-name {
+    margin-left: 0.3rem;
+  }
+
+  .user-icon {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .user-name {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .drop-icon {
+    font-size: 0.9rem;
+    margin-left: 0;
+  }
+
+  .drop-icon-rotate {
+    font-size: 0.9rem;
+    margin: 0;
+  }
+
+  .user-footer {
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-footer {
+    justify-content: center;
+    height: 10vh;
+  }
+
+  .user-button {
+    width: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .user-logout {
+    top: -5vh;
+    font-size: 0.7rem;
+  }
+
+  .logout-icon {
+    margin: 0.2rem;
+    font-size: 0.7rem;
+  }
+}

@@ -31,7 +31,7 @@ function StockGridView({ toggleTrueOnly, filteredProductData }) {
                     alt="img"
                   />
                   <div className={styles["product-button-name"]}>
-                    {product.product_name}
+                    {product.product_name.slice(0, 9)}
                   </div>
                 </button>
               );

@@ -620,7 +620,6 @@ input::-webkit-inner-spin-button {
 .addstock-container {
   width: 35%;
   height: 100vh;
-  background: rgb(209, 209, 209);
   border-right: 1px solid #344c57;
 }
 
@@ -755,4 +754,196 @@ input::-webkit-inner-spin-button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .stockdetail-header {
+    height: 6vh;
+  }
+
+  .utility-update-btn {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .edit-text {
+    display: none;
+  }
+  .utility-delete-btn {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .product-name {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+  }
+
+  .product-id {
+    font-size: 0.6rem;
+    margin-left: 0.5rem;
+  }
+
+  .stockdetail-stockstatus {
+    font-size: 0.4rem;
+  }
+
+  input[type="checkbox"] {
+    height: 0.6rem;
+    width: 0.6rem;
+  }
+
+  .detail-header {
+    font-size: 0.5rem;
+    width: 70%;
+  }
+
+  .stats-desc {
+    font-size: 0.6rem;
+  }
+
+  .stats-content {
+    font-size: 0.7rem;
+  }
+
+  .stats-content > button {
+    font-size: 0.5rem;
+  }
+
+  .detail-content {
+    width: 70%;
+  }
+
+  .detail-content > b {
+    font-size: 0.7rem;
+  }
+
+  .stats-subcontainer {
+    margin-left: 1rem;
+  }
+
+  .stats-header {
+    font-size: 0.5rem;
+  }
+
+  .stats-graph > .stats-subcontainer {
+    margin-left: 4rem;
+  }
+
+  /* STOCK DISPLAY */
+  .addproduct-button {
+    font-size: 0.5rem;
+    padding: 0.3rem 1rem;
+    margin: 0rem 0.5rem;
+  }
+
+  .addproduct-icon {
+    font-size: 1rem;
+  }
+
+  .changeview-button {
+    font-size: 0.7rem;
+    height: 1.6rem;
+    border: 1px solid #344c57;
+  }
+
+  .searchbar-container > input {
+    width: 75%;
+    font-size: 0.7rem;
+    border: 1px solid #344c57;
+  }
+
+  /* sort button */
+
+  .stocklist-sort {
+    height: 10vh;
+  }
+
+  .sort-button {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.5rem;
+    margin: 0rem 0.2rem;
+  }
+
+  /* stocklist view */
+
+  .tableheader-text {
+    font-size: 0.6rem;
+  }
+
+  .product-text {
+    font-size: 0.7rem;
+  }
+
+  .product-container {
+    padding: 0;
+  }
+
+  /* stockgrid view */
+
+  .product-button-priceqty {
+    font-size: 0.7rem;
+    background: black;
+    color: white;
+  }
+
+  .product-button-name {
+    font-size: 0.7rem;
+    bottom: 3px;
+  }
+
+  /* update PRODUCT */
+
+  .update-form-header {
+    font-size: 0.9rem;
+  }
+
+  .update-button {
+    padding: 0.3rem 0rem;
+    font-size: 0.9rem;
+  }
+
+  .update-inputfield {
+    font-size: 0.7rem;
+    border: 1px solid #344c57;
+    width: 40%;
+  }
+
+  .update-input-image {
+    width: 42%;
+    font-size: 0.5rem;
+    border: 1px solid #344c57;
+  }
+
+  /* add product */
+
+  .addstock-header {
+    font-size: 1rem;
+  }
+
+  .addstock-button {
+    font-size: 0.9rem;
+
+    font-weight: 500;
+  }
+
+  .addstock-images {
+    height: 30vh;
+  }
+
+  .addstock-input {
+    border: 1px solid #344c57;
+    font-size: 0.6rem;
+  }
+
+  .addstock-numberinput {
+    border: 1px solid #344c57;
+    font-size: 0.6rem;
+  }
+
+  .addstock-filelabel {
+    border: 1px solid #344c57;
+    font-size: 0.6rem;
+  }
 }

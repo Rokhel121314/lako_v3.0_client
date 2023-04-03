@@ -209,4 +209,22 @@ body {
   .registerpopup-box {
     width: 85%;
   }
+
+  .delete-modal-container {
+    height: 30vh;
+    width: 95%;
+  }
+
+  .delete-modal-body {
+    height: 12vh;
+  }
+
+  .delete-modal-header {
+    font-size: 0.9rem;
+  }
+
+  .modal-cancel-btn,
+  .modal-confirm-btn {
+    font-size: 0.7rem;
+  }
 }

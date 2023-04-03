@@ -17,7 +17,7 @@ function StockListView({ toggleTrueOnly, filteredProductData }) {
             #
           </div>
           <div className={`${styles["tableheader-text"]} ${styles["col-2"]}`}>
-            PRODUCT IMAGE
+            IMAGE
           </div>
           <div className={`${styles["tableheader-text"]} ${styles["col-3"]}`}>
             PRODUCT NAME
