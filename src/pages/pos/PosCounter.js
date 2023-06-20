@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RiAddFill } from "react-icons/ri";
 import { TbMinus } from "react-icons/tb";
 import { AiFillDelete } from "react-icons/ai";
+import { BiReset } from "react-icons/bi";
 import {
   addProductToCounter,
   getPayment,
@@ -63,6 +64,13 @@ function PosCounter() {
           }}>
           RESET
         </button>
+        <button
+          className={styles["reset-button-mobile"]}
+          onClick={() => {
+            dispatch(resetCounter());
+          }}>
+          <BiReset />
+        </button>
       </div>
       <div className={styles["counter-body"]}>
         {!counterItems.length ? (
@@ -87,7 +95,9 @@ function PosCounter() {
                     }}>
                     <TbMinus className={styles["counter-icons"]} />
                   </button>
-                  <span>{product.item_quantity}</span>
+                  <span className={styles["counter-quantity"]}>
+                    {product.item_quantity}
+                  </span>
                   <button
                     className={styles["counter-button"]}
                     onClick={() => {

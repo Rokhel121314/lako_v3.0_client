@@ -53,10 +53,10 @@ function Login() {
             TEST ACCOUNT:
             <br />
             Puring Store
-            <br /> user & pass = jerick
+            <br /> email: jerick@gmail.com pass: jerick
             <br />
             Bitter-Sweet-Cafe
-            <br /> user & pass = rokhel
+            <br /> email: rokhel@gmail.com pass: rokhel
           </div>
           <div className={styles["form-header"]}>Sign in to LAKO</div>
 

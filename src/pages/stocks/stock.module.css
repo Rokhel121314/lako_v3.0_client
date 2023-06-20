@@ -759,7 +759,7 @@ input::-webkit-inner-spin-button {
 @media (max-width: 992px) {
   .stock-container {
     height: 100dvh;
-    position: fixed;
+    /* position: fixed; */
     left: 15%;
   }
 
